@@ -21,7 +21,7 @@ function guardar() {
         stock: stock,
         imagen: imagen
     }
-    let url = "http://localhost:5000/productos"
+    let url = "https://mica2111.pythonanywhere.com/productos"
     const options = {
         body: JSON.stringify(producto),
         method: 'POST',

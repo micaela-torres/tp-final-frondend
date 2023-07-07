@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- ESTILOS-->
+    <link rel="stylesheet" href="./estilos/estilos.css"> 
+    <!-- LINK DE TIPOGRAFIAS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Domine:wght@400;600;700&family=DynaPuff:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <title>Carta de productos</title>
+    
+
+</head>
+
+<body>
+    <header id="header">
+    </header>
+
+    <main>
+        <div id="app" class="container">
+            <h1>Productos</h1>
+            <section v-if="error">Lo sentimos se produjo un error</section>
+            <section v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+                </section>
+
+                <section v-else class="card-general">
+                    <div v-for="producto in productos" >
+                        <div >
+                            <div class="card-luces">
+                                <div class="card-2">
+                                    <img class="card-img" :src="producto.imagen">
+                                    <div>
+                                        <h2>{{producto.nombre}}</h2>
+                                        <h4>{{producto.descripcion}}</h4>
+                                        <h2>$ {{producto.precio}}</h2>
+                                        <h6>Codigo: {{producto.id}}</h6>
+                                        <h6>Stock: {{producto.stock}}</h6>
+                                    </div>
+                                    <div class="centrado-botones">
+                                        <button type="button" class="btn centrado-2" v-on:click="eliminar(producto.id)">Eliminar</button>
+                                        <a class="btn centrado-2"
+                                            :href="'producto-modificar.html?id='+ producto.id+'&nombre=' +producto.nombre+ '&descripcion='+producto.descripcion+' &precio='+producto.precio+'&stock='+producto.stock +  '&imagen='+producto.imagen">Editar</a>
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </section>
+                <div class="centar-boton">
+                    <a class="button-2" href="producto-nuevo.html">Ingresar nuevo producto</a>
+
+                </div>
+                
+            </section>
+        </div>                                      
+    </main>
+
+    <footer id="footer">
+
+    </footer>
+
+    <!-- BOOTSTRAP PARA JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <!-- LINK DE JS -->
+    
+    <script src="./js/main.js"></script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="./js/productos.js"></script>
+</body>
+
+</html>

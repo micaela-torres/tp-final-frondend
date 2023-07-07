@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- ESTILOS-->
+    <link rel="stylesheet" href="./estilos/estilos.css">
+    <!-- LINK DE TIPOGRAFIAS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Domine:wght@400;600;700&family=DynaPuff:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <title>Modifique su producto</title>
+</head>
+
+<body>
+    <header id="header">
+
+    </header>
+
+    <main class="centrar">
+        <form class="form-color">
+            <div class="form-title"><span>Modifica tu</span></div>
+            <div class="title-2"><span>PRODUCTO</span></div>
+            <div class="input-container">
+                <input class="input-mail" type="number" placeholder="Ingrese el id" name="id" id="id">
+                <span> </span>
+            </div>
+            <div class="input-container">
+                <input class="input-mail" type="text" placeholder="Ingrese el nombre" name="nombre" id="nombre">
+                <span> </span>
+            </div>
+            <div class="input-container">
+                <input class="input-mail" type="text" placeholder="Ingrese el descripcion" name="descripcion" id="descripcion">
+                <span> </span>
+            </div>
+            <div class="input-container">
+                <input class="input-mail" type="text" placeholder="Ingrese el precio" name="precio" id="precio">
+                <span> </span>
+            </div>
+            <div class="input-container">
+                <input class="input-mail" type="number" placeholder="Ingrese el stock" name="stock" id="stock">
+                <span> </span>
+            </div>
+            <div class="input-container">
+                <input class="input-mail" type="text" placeholder="Ingrese la imagen" name="imagen" id="imagen">
+                <span> </span>
+            </div>
+
+            <section class="bg-stars">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+            </section>
+
+            <button type="button" class="submit" onclick="modificar()">
+                <span class="sign-text">Modificar</span>
+            </button>
+            <a href="./productos.html"><span class="sign-text">Volver sin guardar</span></a>
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <!-- BOOTSTRAP PARA JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+    <!-- LINK DE JS -->
+
+    <script src="./js/main.js"></script>
+    <script src="./js/producto-modificar.js"></script>
+
+</body>
+
+</html>

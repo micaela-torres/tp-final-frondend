@@ -2,11 +2,11 @@
 document.getElementById("header").innerHTML=`
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../img/logo1.png" alt="" width="60" height="48" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./img/logo1.png" alt="" width="60" height="48" class="d-inline-block align-text-top">
                     Peluditos
             </a>
-            <a class="navbar-brand" href="../productos.html"> Productos
+            <a class="navbar-brand" href="./productos.html"> Productos
             </a>
         </div>
     </nav>
